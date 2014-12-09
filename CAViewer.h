@@ -1,8 +1,8 @@
-
 #include <Viewer.h>
 
 #include <BVH.h>
 #include <Vec3.h>
+#include <Quaternion.h>
 
 #ifndef _CAVIEWER_H
 #define _CAVIEWER_H
@@ -38,6 +38,21 @@ private:
 				   math::Vec3<float>& translation,
 				   math::Vec3<float>& rotations,
 				   int frameNumber);
+	void bvhGetJointTransforms(const chara::BVHJoint& joint,
+				   math::Vec3<float>& offset,
+				   math::Vec3<float>& translation,
+				   math::TQuaternion<float>& rotation,
+				   int frameNumber);
+
+	void bvhVec3LinearInterpolation(const math::Vec3<float>& v1,
+					const math::Vec3<float>& v2,
+					math::Vec3<float>& r,
+					float value);
+	void bvhRotationInterpolation(const math::TQuaternion<float>& r1,
+				      const math::TQuaternion<float>& r2,
+				      float value,
+				      math::Vec3<float>& rotationAxisResult,
+				      float& rotationDegreeResult);
 
 protected :
 
