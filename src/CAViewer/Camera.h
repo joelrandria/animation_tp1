@@ -2,6 +2,11 @@
 #define CAMERA_H_INCLUDED
 
 #include "Vec3.h"
+
+#include <glut.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
+
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -164,8 +169,5 @@ protected:
     Camera_FlyTrackball flyOrTrackball;
     int mx,my;      // mouse position
 };
-
-
-
 
 #endif // CAMERA_H_INCLUDED

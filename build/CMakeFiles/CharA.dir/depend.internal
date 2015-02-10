@@ -25,6 +25,8 @@ CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o
 CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
  ../src/CALoader/BVH.h
  ../src/CALoader/BVHAxis.h
+ ../src/CALoader/BVHChannel.h
+ ../src/CALoader/BVHJoint.h
  ../src/CAMath/Mat4.h
  ../src/CAMath/Vec.h
  ../src/CAMath/Vec2.h
@@ -32,6 +34,8 @@ CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
  ../src/CAMath/Vec4.h
  /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.cpp
  /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/glut.h
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o
  ../src/CALoader/BVH.h
  ../src/CALoader/BVHAxis.h
@@ -45,6 +49,7 @@ CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o
  ../src/CAMath/Vec4.h
  ../src/CAViewer/Camera.h
  ../src/CAViewer/Viewer.h
+ /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.h
  /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.cpp
  /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.h
  /usr/include/GL/freeglut_std.h

@@ -1,20 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-#include <glut.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
-
 #include "CAViewer.h"
+#include "CASkeleton.h"
+
 #include <BVH.h>
 #include <BVHChannel.h>
 #include <BVHJoint.h>
 #include <Mat4.h>
 #include <Quaternion.h>
 
+#include <glut.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
 using namespace chara;
 using namespace std;
+
+CAViewer::CAViewer()
+  :Viewer(),
+   isPhysics(false),
+   m_bvh(NULL),
+   m_bvhFrame(0),
+   m_skel(0)
+{
+}
+CAViewer::~CAViewer()
+{
+}
 
 void CAViewer::help()
 {
@@ -25,76 +39,63 @@ void CAViewer::help()
   Viewer::help();
 }
 
-CAViewer::~CAViewer()
-{
-}
-
 void CAViewer::init()
 {
   Viewer::init();
 
-  //std::string fn_front = "G:/alex/code/CharAnim_m2pro/data/OneArm.bvh";
-  //std::string fn_front = "/home/pers/alexandre.meyer/code/CharAnim_m2pro/data/OneArm.bvh";
   std::string fn_front = "../data/divers/G25Ballet2.bvh";
 
-  if (fn_front!="")
+  if (fn_front != "")
   {
-    std::string current_file( fn_front );
+    std::string current_file(fn_front);
     printf("%s\n", current_file.c_str());
-    m_bvh = new BVH(current_file.c_str(), true );
 
-    cout<<"BVH"<<endl;
-    cout<<*m_bvh<<endl;
-    cout<<"------------"<<endl;
+    m_bvh = new BVH(current_file.c_str(), true);
+
+    m_skel = new CASkeleton(*m_bvh);
+
+    cout << "BVH" << endl;
+    cout << *m_bvh << endl;
+    cout << "------------" << endl;
   }
-  else cout<<"No BVH\n";
+  else
+  {
+    cout << "No BVH\n";
+  }
 
-  m_target.set( 10, 10, 0);
-
-  //    // TEST quaternion (ne sert à rien)
-  //    math::Quaternion q1( math::Vec3f(0,0,1),  0.08f);
-  //    math::Quaternion q2( math::Vec3f(0,0,1),  0.04f);
-  //    math::Quaternion qr;
-  //    qr = math::Quaternion::slerp( q1, q2, 0.5f);
-  //    math::Vec3f v;
-  //    float a;
-  //    qr.getAxisAngle(v,a);
-  //    cout<<"v="<<v<<"  angle="<<a<<endl;
-  //
-  //
-  //    math::QuaternionD qq1( math::Vec3d(0,0,1),  0.08);
-  //    math::QuaternionD qq2( math::Vec3d(0,0,1),  0.04);
-  //    math::QuaternionD qqr;
-  //    qqr = math::QuaternionD::slerp( qq1, qq2, 0.5);
-  //    math::Vec3d vv;
-  //    double aa;
-  //    qqr.getAxisAngle(vv,aa);
-  //    cout<<"vv="<<vv<<"  angleD="<<aa<<endl;
-
+  m_target.set(10, 10, 0);
 }
 
-
+void CAViewer::animate()
+{
+  if (m_bvh)
+  {
+    ++m_bvhFrame;
+    if (m_bvhFrame>=m_bvh->getNumFrame()) m_bvhFrame=0;
+    //m_skel->setPostureFromBVH( *m_bvh, m_bvhFrame);
+  }
+}
 
 void CAViewer::draw()
 {
-  //if (m_skel) m_skel->render();
+  // glPushMatrix();
+  // glColor3f(1, 0, 0);
+  // bvhDrawGL(*m_bvh, m_bvhFrame);
+  // glPopMatrix();
 
-  glPushMatrix();
-  glColor3f(1, 0, 0);
-  bvhDrawGL(*m_bvh, m_bvhFrame);
-  glPopMatrix();
+  // glPushMatrix();
+  // glColor3f(0, 1, 0);
+  // bvhDrawGL(*m_bvh, m_bvhFrame + 50);
+  // glPopMatrix();
 
-  glPushMatrix();
-  glColor3f(0, 1, 0);
-  bvhDrawGL(*m_bvh, m_bvhFrame + 50);
-  glPopMatrix();
+  // glPushMatrix();
+  // glColor3f(1, 1, 0);
+  // bvhTransitionDrawGL(*m_bvh, m_bvhFrame, *m_bvh, m_bvhFrame + 50, 0.5f);
+  // glPopMatrix();
 
-  glPushMatrix();
-  glColor3f(1, 1, 0);
-  bvhTransitionDrawGL(*m_bvh, m_bvhFrame, *m_bvh, m_bvhFrame + 50, 0.5f);
-  glPopMatrix();
+  if (m_skel)
+    m_skel->drawGL();
 }
-
 void CAViewer::bvhDrawGL(const chara::BVH& bvh, int frameNumber)
 {
   bvhDrawGLRec(*bvh.getRoot(), frameNumber);
@@ -349,8 +350,7 @@ void CAViewer::bvhRotationInterpolation(const math::TQuaternion<float>& q1,
   math::TQuaternion<float> qi;
 
   // Slerp
-  qi = math::TQuaternion<float>::slerp(q1, q2, value// , false
-				       );
+  qi = math::TQuaternion<float>::slerp(q1, q2, value);
 
   // Obtention de l'axe de rotation du quaternion
   qi.getAxisAngle(rotationAxisResult, radians);
@@ -432,18 +432,3 @@ void CAViewer::specialKeyPressed(int key, int x, int y)
   }
   updateGL();
 }
-
-
-
-void CAViewer::animate()
-{
-  if (m_bvh)
-  {
-    ++m_bvhFrame;
-    if (m_bvhFrame>=m_bvh->getNumFrame()) m_bvhFrame=0;
-    //m_skel->setPostureFromBVH( *m_bvh, m_bvhFrame);
-  }
-}
-
-
-

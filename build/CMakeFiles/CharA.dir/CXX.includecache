@@ -105,6 +105,12 @@ Vec3.h
 ../src/CAViewer/Camera.h
 Vec3.h
 ../src/CAViewer/Vec3.h
+glut.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
 math.h
 -
 
@@ -116,21 +122,19 @@ Camera.h
 BVH.h
 -
 
+/home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.h
+BVH.h
+-
+Mat4.h
+-
+vector
+-
+
 /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.cpp
-stdio.h
--
-stdlib.h
--
-math.h
--
-glut.h
--
-GL/gl.h
--
-GL/glu.h
--
 CAViewer.h
 /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.h
+CASkeleton.h
+/home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.h
 BVH.h
 -
 BVHChannel.h
@@ -140,6 +144,18 @@ BVHJoint.h
 Mat4.h
 -
 Quaternion.h
+-
+glut.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
 -
 
 /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.h
