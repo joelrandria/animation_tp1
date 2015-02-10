@@ -59,9 +59,11 @@ void CAViewer::init()
     m_skel = new CASkeleton(*m_bvh);
 
     CASkeleton skel2(*m_bvh);
-    skel2.setPose(*m_bvh, 5);
 
-    std::cout << "Distance(skel1, skel2) = " << m_skel->distance(skel2) << std::endl;
+    if (m_skel->hasSameLogicalStructure(skel2))
+      std::cout << "Distance(skel1, skel2) = " << m_skel->distance(skel2) << std::endl;
+    else
+      std::cout << "Les 2 squelettes spécifiés n'ont pas la même structure logique" << std::endl;
   }
   else
   {
