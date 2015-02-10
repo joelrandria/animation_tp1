@@ -52,11 +52,16 @@ void CAViewer::init()
 
     m_bvh = new BVH(current_file.c_str(), true);
 
-    m_skel = new CASkeleton(*m_bvh);
-
     cout << "BVH" << endl;
     cout << *m_bvh << endl;
     cout << "------------" << endl;
+
+    m_skel = new CASkeleton(*m_bvh);
+
+    CASkeleton skel2(*m_bvh);
+    skel2.setPose(*m_bvh, 5);
+
+    std::cout << "Distance(skel1, skel2) = " << m_skel->distance(skel2) << std::endl;
   }
   else
   {
@@ -74,7 +79,7 @@ void CAViewer::animate()
     if (m_bvhFrame >= m_bvh->getNumFrame())
       m_bvhFrame=0;
 
-    //m_skel->setPose(*m_bvh, m_bvhFrame);
+    m_skel->setPose(*m_bvh, m_bvhFrame);
   }
 }
 
