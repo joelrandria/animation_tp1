@@ -71,8 +71,10 @@ void CAViewer::animate()
   if (m_bvh)
   {
     ++m_bvhFrame;
-    if (m_bvhFrame>=m_bvh->getNumFrame()) m_bvhFrame=0;
-    //m_skel->setPostureFromBVH( *m_bvh, m_bvhFrame);
+    if (m_bvhFrame >= m_bvh->getNumFrame())
+      m_bvhFrame=0;
+
+    //m_skel->setPose(*m_bvh, m_bvhFrame);
   }
 }
 
