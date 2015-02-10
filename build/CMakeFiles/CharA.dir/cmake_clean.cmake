@@ -5,6 +5,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/CharA.dir/src/CACore/CASkeleton.o"
   "CMakeFiles/CharA.dir/src/CAViewer/Viewer.o"
   "CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o"
+  "CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o"
   "CMakeFiles/CharA.dir/src/CAViewer/main.o"
   "CharA_d.pdb"
   "CharA_d"

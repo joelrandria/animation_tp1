@@ -79,8 +79,6 @@ void CAViewer::draw()
 {
   //if (m_skel) m_skel->render();
 
-  printf("Drawing frame #%d\r\n", m_bvhFrame);
-
   glPushMatrix();
   glColor3f(1, 0, 0);
   bvhDrawGL(*m_bvh, m_bvhFrame);

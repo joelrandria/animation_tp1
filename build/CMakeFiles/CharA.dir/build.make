@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jo/m2im/animation/CharAnim_m2pro
+CMAKE_SOURCE_DIR = /home/jo/m2im/animation/animation_tp1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jo/m2im/animation/CharAnim_m2pro/build
+CMAKE_BINARY_DIR = /home/jo/m2im/animation/animation_tp1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CharA.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/CharA.dir/flags.make
 
 CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o: ../src/CALoader/BVHChannel.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o -c /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVHChannel.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o -c /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHChannel.cpp
 
 CMakeFiles/CharA.dir/src/CALoader/BVHChannel.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CALoader/BVHChannel.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVHChannel.cpp > CMakeFiles/CharA.dir/src/CALoader/BVHChannel.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHChannel.cpp > CMakeFiles/CharA.dir/src/CALoader/BVHChannel.i
 
 CMakeFiles/CharA.dir/src/CALoader/BVHChannel.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CALoader/BVHChannel.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVHChannel.cpp -o CMakeFiles/CharA.dir/src/CALoader/BVHChannel.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHChannel.cpp -o CMakeFiles/CharA.dir/src/CALoader/BVHChannel.s
 
 CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o.requires:
 .PHONY : CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/CharA.dir/src/CALoader/BVHChannel.o.provides.build: CMakeFiles/CharA.
 
 CMakeFiles/CharA.dir/src/CALoader/BVH.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CALoader/BVH.o: ../src/CALoader/BVH.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CALoader/BVH.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CALoader/BVH.o -c /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVH.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CALoader/BVH.o -c /home/jo/m2im/animation/animation_tp1/src/CALoader/BVH.cpp
 
 CMakeFiles/CharA.dir/src/CALoader/BVH.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CALoader/BVH.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVH.cpp > CMakeFiles/CharA.dir/src/CALoader/BVH.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CALoader/BVH.cpp > CMakeFiles/CharA.dir/src/CALoader/BVH.i
 
 CMakeFiles/CharA.dir/src/CALoader/BVH.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CALoader/BVH.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVH.cpp -o CMakeFiles/CharA.dir/src/CALoader/BVH.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CALoader/BVH.cpp -o CMakeFiles/CharA.dir/src/CALoader/BVH.s
 
 CMakeFiles/CharA.dir/src/CALoader/BVH.o.requires:
 .PHONY : CMakeFiles/CharA.dir/src/CALoader/BVH.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/CharA.dir/src/CALoader/BVH.o.provides.build: CMakeFiles/CharA.dir/src
 
 CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o: ../src/CALoader/BVHJoint.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o -c /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVHJoint.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o -c /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHJoint.cpp
 
 CMakeFiles/CharA.dir/src/CALoader/BVHJoint.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CALoader/BVHJoint.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVHJoint.cpp > CMakeFiles/CharA.dir/src/CALoader/BVHJoint.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHJoint.cpp > CMakeFiles/CharA.dir/src/CALoader/BVHJoint.i
 
 CMakeFiles/CharA.dir/src/CALoader/BVHJoint.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CALoader/BVHJoint.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/CharAnim_m2pro/src/CALoader/BVHJoint.cpp -o CMakeFiles/CharA.dir/src/CALoader/BVHJoint.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHJoint.cpp -o CMakeFiles/CharA.dir/src/CALoader/BVHJoint.s
 
 CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o.requires:
 .PHONY : CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o.provides.build: CMakeFiles/CharA.di
 
 CMakeFiles/CharA.dir/src/CACore/CASkeleton.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CACore/CASkeleton.o: ../src/CACore/CASkeleton.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CACore/CASkeleton.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CACore/CASkeleton.o -c /home/jo/m2im/animation/CharAnim_m2pro/src/CACore/CASkeleton.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CACore/CASkeleton.o -c /home/jo/m2im/animation/animation_tp1/src/CACore/CASkeleton.cpp
 
 CMakeFiles/CharA.dir/src/CACore/CASkeleton.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CACore/CASkeleton.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/CharAnim_m2pro/src/CACore/CASkeleton.cpp > CMakeFiles/CharA.dir/src/CACore/CASkeleton.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CACore/CASkeleton.cpp > CMakeFiles/CharA.dir/src/CACore/CASkeleton.i
 
 CMakeFiles/CharA.dir/src/CACore/CASkeleton.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CACore/CASkeleton.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/CharAnim_m2pro/src/CACore/CASkeleton.cpp -o CMakeFiles/CharA.dir/src/CACore/CASkeleton.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CACore/CASkeleton.cpp -o CMakeFiles/CharA.dir/src/CACore/CASkeleton.s
 
 CMakeFiles/CharA.dir/src/CACore/CASkeleton.o.requires:
 .PHONY : CMakeFiles/CharA.dir/src/CACore/CASkeleton.o.requires
@@ -143,17 +143,17 @@ CMakeFiles/CharA.dir/src/CACore/CASkeleton.o.provides.build: CMakeFiles/CharA.di
 
 CMakeFiles/CharA.dir/src/CAViewer/Viewer.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CAViewer/Viewer.o: ../src/CAViewer/Viewer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CAViewer/Viewer.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/Viewer.o -c /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/Viewer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/Viewer.o -c /home/jo/m2im/animation/animation_tp1/src/CAViewer/Viewer.cpp
 
 CMakeFiles/CharA.dir/src/CAViewer/Viewer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CAViewer/Viewer.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/Viewer.cpp > CMakeFiles/CharA.dir/src/CAViewer/Viewer.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CAViewer/Viewer.cpp > CMakeFiles/CharA.dir/src/CAViewer/Viewer.i
 
 CMakeFiles/CharA.dir/src/CAViewer/Viewer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CAViewer/Viewer.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/Viewer.cpp -o CMakeFiles/CharA.dir/src/CAViewer/Viewer.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CAViewer/Viewer.cpp -o CMakeFiles/CharA.dir/src/CAViewer/Viewer.s
 
 CMakeFiles/CharA.dir/src/CAViewer/Viewer.o.requires:
 .PHONY : CMakeFiles/CharA.dir/src/CAViewer/Viewer.o.requires
@@ -166,17 +166,17 @@ CMakeFiles/CharA.dir/src/CAViewer/Viewer.o.provides.build: CMakeFiles/CharA.dir/
 
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAViewer/CAViewer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o -c /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/CAViewer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o -c /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.cpp
 
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CAViewer/CAViewer.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/CAViewer.cpp > CMakeFiles/CharA.dir/src/CAViewer/CAViewer.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.cpp > CMakeFiles/CharA.dir/src/CAViewer/CAViewer.i
 
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CAViewer/CAViewer.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/CAViewer.cpp -o CMakeFiles/CharA.dir/src/CAViewer/CAViewer.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.cpp -o CMakeFiles/CharA.dir/src/CAViewer/CAViewer.s
 
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o.requires:
 .PHONY : CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o.requires
@@ -187,19 +187,42 @@ CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o.provides: CMakeFiles/CharA.dir/src/
 
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o.provides.build: CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o
 
+CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o: CMakeFiles/CharA.dir/flags.make
+CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o: ../src/CAViewer/CASkeleton.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o -c /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.cpp
+
+CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.cpp > CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.i
+
+CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.cpp -o CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.s
+
+CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.requires:
+.PHONY : CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.requires
+
+CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.provides: CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.requires
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.provides.build
+.PHONY : CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.provides
+
+CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.provides.build: CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
+
 CMakeFiles/CharA.dir/src/CAViewer/main.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAViewer/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CAViewer/main.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/main.o -c /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/main.o -c /home/jo/m2im/animation/animation_tp1/src/CAViewer/main.cpp
 
 CMakeFiles/CharA.dir/src/CAViewer/main.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CAViewer/main.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/main.cpp > CMakeFiles/CharA.dir/src/CAViewer/main.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CAViewer/main.cpp > CMakeFiles/CharA.dir/src/CAViewer/main.i
 
 CMakeFiles/CharA.dir/src/CAViewer/main.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CAViewer/main.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/main.cpp -o CMakeFiles/CharA.dir/src/CAViewer/main.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CAViewer/main.cpp -o CMakeFiles/CharA.dir/src/CAViewer/main.s
 
 CMakeFiles/CharA.dir/src/CAViewer/main.o.requires:
 .PHONY : CMakeFiles/CharA.dir/src/CAViewer/main.o.requires
@@ -218,6 +241,7 @@ CharA_OBJECTS = \
 "CMakeFiles/CharA.dir/src/CACore/CASkeleton.o" \
 "CMakeFiles/CharA.dir/src/CAViewer/Viewer.o" \
 "CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o" \
+"CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o" \
 "CMakeFiles/CharA.dir/src/CAViewer/main.o"
 
 # External object files for target CharA
@@ -229,6 +253,7 @@ CharA_d: CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o
 CharA_d: CMakeFiles/CharA.dir/src/CACore/CASkeleton.o
 CharA_d: CMakeFiles/CharA.dir/src/CAViewer/Viewer.o
 CharA_d: CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o
+CharA_d: CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
 CharA_d: CMakeFiles/CharA.dir/src/CAViewer/main.o
 CharA_d: CMakeFiles/CharA.dir/build.make
 CharA_d: /usr/lib/x86_64-linux-gnu/libGLU.so
@@ -252,6 +277,7 @@ CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o.requ
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CACore/CASkeleton.o.requires
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/Viewer.o.requires
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o.requires
+CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.requires
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/main.o.requires
 .PHONY : CMakeFiles/CharA.dir/requires
 
@@ -260,6 +286,6 @@ CMakeFiles/CharA.dir/clean:
 .PHONY : CMakeFiles/CharA.dir/clean
 
 CMakeFiles/CharA.dir/depend:
-	cd /home/jo/m2im/animation/CharAnim_m2pro/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jo/m2im/animation/CharAnim_m2pro /home/jo/m2im/animation/CharAnim_m2pro /home/jo/m2im/animation/CharAnim_m2pro/build /home/jo/m2im/animation/CharAnim_m2pro/build /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles/CharA.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jo/m2im/animation/animation_tp1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jo/m2im/animation/animation_tp1 /home/jo/m2im/animation/animation_tp1 /home/jo/m2im/animation/animation_tp1/build /home/jo/m2im/animation/animation_tp1/build /home/jo/m2im/animation/animation_tp1/build/CMakeFiles/CharA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CharA.dir/depend
 

@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jo/m2im/animation/CharAnim_m2pro
+CMAKE_SOURCE_DIR = /home/jo/m2im/animation/animation_tp1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jo/m2im/animation/CharAnim_m2pro/build
+CMAKE_BINARY_DIR = /home/jo/m2im/animation/animation_tp1/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/CharA.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/jo/m2im/animation/CharAnim_m2pro/build
 CMakeFiles/CharA.dir/all:
 	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/depend
 	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles  1 2 3 4 5 6 7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles  1 2 3 4 5 6 7 8
 	@echo "Built target CharA"
 .PHONY : CMakeFiles/CharA.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/CharA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CharA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/animation_tp1/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CharA.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/animation_tp1/build/CMakeFiles 0
 .PHONY : CMakeFiles/CharA.dir/rule
 
 # Convenience name for target.

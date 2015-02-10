@@ -72,6 +72,7 @@ SET( CHARA_FILES
 			./src/CAViewer/Viewer.cpp
 			./src/CAViewer/CAViewer.h
 			./src/CAViewer/CAViewer.cpp
+			./src/CAViewer/CASkeleton.cpp
 			./src/CAViewer/main.cpp
 )
 

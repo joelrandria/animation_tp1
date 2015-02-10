@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jo/m2im/animation/CharAnim_m2pro
+CMAKE_SOURCE_DIR = /home/jo/m2im/animation/animation_tp1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jo/m2im/animation/CharAnim_m2pro/build
+CMAKE_BINARY_DIR = /home/jo/m2im/animation/animation_tp1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/animation_tp1/build/CMakeFiles /home/jo/m2im/animation/animation_tp1/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jo/m2im/animation/animation_tp1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -172,6 +172,21 @@ src/CALoader/BVHJoint.s:
 .PHONY : src/CALoader/BVHJoint.s
 
 # target to build an object file
+src/CAViewer/CASkeleton.o:
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
+.PHONY : src/CAViewer/CASkeleton.o
+
+# target to preprocess a source file
+src/CAViewer/CASkeleton.i:
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.i
+.PHONY : src/CAViewer/CASkeleton.i
+
+# target to generate assembly for a file
+src/CAViewer/CASkeleton.s:
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.s
+.PHONY : src/CAViewer/CASkeleton.s
+
+# target to build an object file
 src/CAViewer/CAViewer.o:
 	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o
 .PHONY : src/CAViewer/CAViewer.o
@@ -237,6 +252,9 @@ help:
 	@echo "... src/CALoader/BVHJoint.o"
 	@echo "... src/CALoader/BVHJoint.i"
 	@echo "... src/CALoader/BVHJoint.s"
+	@echo "... src/CAViewer/CASkeleton.o"
+	@echo "... src/CAViewer/CASkeleton.i"
+	@echo "... src/CAViewer/CASkeleton.s"
 	@echo "... src/CAViewer/CAViewer.o"
 	@echo "... src/CAViewer/CAViewer.i"
 	@echo "... src/CAViewer/CAViewer.s"

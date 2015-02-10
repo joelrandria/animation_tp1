@@ -1,1 +1,1 @@
-/home/jo/m2im/animation/CharAnim_m2pro/build/CMakeFiles/CharA.dir
+/home/jo/m2im/animation/animation_tp1/build/CMakeFiles/CharA.dir

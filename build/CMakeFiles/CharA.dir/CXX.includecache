@@ -24,6 +24,30 @@ BVHAxis.h
 
 ../src/CALoader/BVHAxis.h
 
+../src/CALoader/BVHChannel.h
+BVHAxis.h
+../src/CALoader/BVHAxis.h
+vector
+-
+
+../src/CALoader/BVHJoint.h
+string
+-
+vector
+-
+cassert
+-
+iostream
+-
+fstream
+-
+BVH.h
+../src/CALoader/BVH.h
+BVHChannel.h
+../src/CALoader/BVHChannel.h
+BVHAxis.h
+../src/CALoader/BVHAxis.h
+
 ../src/CAMath/Mat4.h
 iostream
 -
@@ -78,16 +102,6 @@ Vec2.h
 Vec3.h
 -
 
-../src/CAViewer/CAViewer.h
-Viewer.h
--
-BVH.h
--
-Vec3.h
--
-Quaternion.h
--
-
 ../src/CAViewer/Camera.h
 Vec3.h
 ../src/CAViewer/Vec3.h
@@ -102,7 +116,7 @@ Camera.h
 BVH.h
 -
 
-/home/jo/m2im/animation/CharAnim_m2pro/src/CAViewer/main.cpp
+/home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.cpp
 stdio.h
 -
 stdlib.h
@@ -115,9 +129,27 @@ GL/gl.h
 -
 GL/glu.h
 -
+CAViewer.h
+/home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.h
+BVH.h
+-
+BVHChannel.h
+-
+BVHJoint.h
+-
 Mat4.h
 -
-CAViewer.h
+Quaternion.h
+-
+
+/home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.h
+Viewer.h
+-
+BVH.h
+-
+Vec3.h
+-
+Quaternion.h
 -
 
 /usr/include/GL/freeglut_std.h
