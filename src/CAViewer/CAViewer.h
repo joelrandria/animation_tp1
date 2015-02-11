@@ -1,11 +1,15 @@
 #ifndef _CAVIEWER_H
 #define _CAVIEWER_H
 
-#include <Viewer.h>
+#include "CAMotionGraph.h"
 
 #include <BVH.h>
 #include <Vec3.h>
+#include <Viewer.h>
 #include <Quaternion.h>
+
+#include <vector>
+#include <string>
 
 class CASkeleton;
 
@@ -20,11 +24,11 @@ protected:
   //! mocap frame number (when mocap is used)
   int m_bvhFrame;
 
-  //! target point for the IK
-  math::Vec3f m_target;
-
   //! skeleton (build from the mocap-BVH data m_bvh)
   CASkeleton* m_skel;
+
+  //! motion graph
+  CAMotionGraph m_graph;
 
 public:
 
@@ -33,6 +37,7 @@ public:
 
   virtual void help();
   virtual void init();
+  virtual void loadMotionGraph(const std::vector<std::string>& bvhFilenames, const float transitionThreshold = 1);
   virtual void animate();
   virtual void draw();
 

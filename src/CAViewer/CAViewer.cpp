@@ -35,7 +35,6 @@ void CAViewer::help()
   printf("Animation:\n");
   printf("   n: Next character pose\n");
   printf("   b: Back(Previous) character pose");
-  printf("   shift+arrows: Move the target point");
   Viewer::help();
 }
 
@@ -57,20 +56,15 @@ void CAViewer::init()
     cout << "------------" << endl;
 
     m_skel = new CASkeleton(*m_bvh);
-
-    CASkeleton skel2(*m_bvh);
-
-    if (m_skel->hasSameLogicalStructure(skel2))
-      std::cout << "Distance(skel1, skel2) = " << m_skel->distance(skel2) << std::endl;
-    else
-      std::cout << "Les 2 squelettes spécifiés n'ont pas la même structure logique" << std::endl;
   }
   else
   {
     cout << "No BVH\n";
   }
-
-  m_target.set(10, 10, 0);
+}
+void CAViewer::loadMotionGraph(const std::vector<std::string>& bvhFilenames, const float transitionThreshold)
+{
+  m_graph.load(bvhFilenames, transitionThreshold);
 }
 
 void CAViewer::animate()
@@ -409,27 +403,21 @@ void CAViewer::specialKeyPressed(int key, int x, int y)
     switch (key)
     {
     case GLUT_KEY_UP:
-      m_target.y += 1;
       handled=true;
       break;
     case GLUT_KEY_DOWN:
-      m_target.y -= 1;
       handled=true;
       break;
     case GLUT_KEY_LEFT:
-      m_target.x -= 1;
       handled=true;
       break;
     case GLUT_KEY_RIGHT:
-      m_target.x += 1;
       handled=true;
       break;
     case GLUT_KEY_PAGE_UP:
-      m_target.z += 1;
       handled=true;
       break;
     case GLUT_KEY_PAGE_DOWN:
-      m_target.z -= 1;
       handled=true;
       break;
     }

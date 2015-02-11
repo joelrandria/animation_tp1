@@ -210,9 +210,32 @@ CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.provides: CMakeFiles/CharA.dir/sr
 
 CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.provides.build: CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
 
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: CMakeFiles/CharA.dir/flags.make
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAViewer/CAMotionGraph.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o -c /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAMotionGraph.cpp
+
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAMotionGraph.cpp > CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.i
+
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAMotionGraph.cpp -o CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.s
+
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.requires:
+.PHONY : CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.requires
+
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.provides: CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.requires
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.provides.build
+.PHONY : CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.provides
+
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.provides.build: CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o
+
 CMakeFiles/CharA.dir/src/CAViewer/main.o: CMakeFiles/CharA.dir/flags.make
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAViewer/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jo/m2im/animation/animation_tp1/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/CharA.dir/src/CAViewer/main.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CharA.dir/src/CAViewer/main.o -c /home/jo/m2im/animation/animation_tp1/src/CAViewer/main.cpp
 
@@ -242,6 +265,7 @@ CharA_OBJECTS = \
 "CMakeFiles/CharA.dir/src/CAViewer/Viewer.o" \
 "CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o" \
 "CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o" \
+"CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o" \
 "CMakeFiles/CharA.dir/src/CAViewer/main.o"
 
 # External object files for target CharA
@@ -254,6 +278,7 @@ CharA_d: CMakeFiles/CharA.dir/src/CACore/CASkeleton.o
 CharA_d: CMakeFiles/CharA.dir/src/CAViewer/Viewer.o
 CharA_d: CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o
 CharA_d: CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
+CharA_d: CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o
 CharA_d: CMakeFiles/CharA.dir/src/CAViewer/main.o
 CharA_d: CMakeFiles/CharA.dir/build.make
 CharA_d: /usr/lib/x86_64-linux-gnu/libGLU.so
@@ -278,6 +303,7 @@ CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CACore/CASkeleton.o.requ
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/Viewer.o.requires
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o.requires
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o.requires
+CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o.requires
 CMakeFiles/CharA.dir/requires: CMakeFiles/CharA.dir/src/CAViewer/main.o.requires
 .PHONY : CMakeFiles/CharA.dir/requires
 

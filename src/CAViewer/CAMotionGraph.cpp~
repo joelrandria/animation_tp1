@@ -1,0 +1,64 @@
+#include "CAMotionGraph.h"
+#include "CASkeleton.h"
+
+#include <stdio.h>
+
+CAMotionGraph::CAMotionGraph()
+{
+}
+CAMotionGraph::~CAMotionGraph()
+{
+}
+
+void CAMotionGraph::load(const std::vector<std::string>& bvhFilenames, const float transitionThreshold)
+{
+  // std::string fn_front = "../data/divers/G25Ballet2.bvh";
+
+  // if (fn_front != "")
+  // {
+  //   std::string current_file(fn_front);
+  //   printf("%s\n", current_file.c_str());
+
+  //   m_bvh = new BVH(current_file.c_str(), true);
+
+  //   cout << "BVH" << endl;
+  //   cout << *m_bvh << endl;
+  //   cout << "------------" << endl;
+
+  //   m_skel = new CASkeleton(*m_bvh);
+
+  //   CASkeleton skel2(*m_bvh);
+
+  //   if (m_skel->hasSameLogicalStructure(skel2))
+  //     std::cout << "Distance(skel1, skel2) = " << m_skel->distance(skel2) << std::endl;
+  //   else
+  //     std::cout << "Les 2 squelettes spécifiés n'ont pas la même structure logique" << std::endl;
+  // }
+  // else
+  // {
+  //   cout << "No BVH\n";
+  // }
+
+  unsigned int i;
+  const unsigned int bvhCount = bvhFilenames.size();
+
+  m_BVH.clear();
+  m_skeletons.clear();
+  for (i = 0; i < bvhCount; ++i)
+  {
+    m_BVH.push_back(*new chara::BVH(bvhFilenames[i], true));
+    m_skeletons.push_back();
+  }
+
+  for (i = 1; i < bvhCount; ++i)
+  {
+    if (!m_BVH[0].hasSameLogicalStructure(m_BVH[i]))
+    {
+      fprintf(stderr, "CAMotionGraph::load(): Impossible de construire le graphe d'animation: ");
+      fprintf(stderr, "Les BVH '%s' et '%s' ne possèdent pas la même structure logique\r\n", bvhFilenames[0], bvhFilenames[i]);
+      exit(-1);
+    }
+  }
+
+  m_GrapheNode.clear();
+}

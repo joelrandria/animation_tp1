@@ -22,6 +22,17 @@ CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o
  /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHChannel.h
  /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHJoint.cpp
  /home/jo/m2im/animation/animation_tp1/src/CALoader/BVHJoint.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o
+ ../src/CALoader/BVH.h
+ ../src/CALoader/BVHAxis.h
+ ../src/CAMath/Mat4.h
+ ../src/CAMath/Vec.h
+ ../src/CAMath/Vec2.h
+ ../src/CAMath/Vec3.h
+ ../src/CAMath/Vec4.h
+ /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAMotionGraph.cpp
+ /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAMotionGraph.h
+ /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.h
 CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
  ../src/CALoader/BVH.h
  ../src/CALoader/BVHAxis.h
@@ -49,6 +60,7 @@ CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o
  ../src/CAMath/Vec4.h
  ../src/CAViewer/Camera.h
  ../src/CAViewer/Viewer.h
+ /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAMotionGraph.h
  /home/jo/m2im/animation/animation_tp1/src/CAViewer/CASkeleton.h
  /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.cpp
  /home/jo/m2im/animation/animation_tp1/src/CAViewer/CAViewer.h
@@ -76,6 +88,8 @@ CMakeFiles/CharA.dir/src/CAViewer/main.o
  ../src/CAMath/Vec2.h
  ../src/CAMath/Vec3.h
  ../src/CAMath/Vec4.h
+ ../src/CAViewer/CAMotionGraph.h
+ ../src/CAViewer/CASkeleton.h
  ../src/CAViewer/CAViewer.h
  ../src/CAViewer/Camera.h
  ../src/CAViewer/Viewer.h

@@ -172,6 +172,21 @@ src/CALoader/BVHJoint.s:
 .PHONY : src/CALoader/BVHJoint.s
 
 # target to build an object file
+src/CAViewer/CAMotionGraph.o:
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o
+.PHONY : src/CAViewer/CAMotionGraph.o
+
+# target to preprocess a source file
+src/CAViewer/CAMotionGraph.i:
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.i
+.PHONY : src/CAViewer/CAMotionGraph.i
+
+# target to generate assembly for a file
+src/CAViewer/CAMotionGraph.s:
+	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.s
+.PHONY : src/CAViewer/CAMotionGraph.s
+
+# target to build an object file
 src/CAViewer/CASkeleton.o:
 	$(MAKE) -f CMakeFiles/CharA.dir/build.make CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o
 .PHONY : src/CAViewer/CASkeleton.o
@@ -252,6 +267,9 @@ help:
 	@echo "... src/CALoader/BVHJoint.o"
 	@echo "... src/CALoader/BVHJoint.i"
 	@echo "... src/CALoader/BVHJoint.s"
+	@echo "... src/CAViewer/CAMotionGraph.o"
+	@echo "... src/CAViewer/CAMotionGraph.i"
+	@echo "... src/CAViewer/CAMotionGraph.s"
 	@echo "... src/CAViewer/CASkeleton.o"
 	@echo "... src/CAViewer/CASkeleton.i"
 	@echo "... src/CAViewer/CASkeleton.s"

@@ -22,6 +22,17 @@ CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o: ../src/CALoader/BVHChannel.h
 CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o: ../src/CALoader/BVHJoint.cpp
 CMakeFiles/CharA.dir/src/CALoader/BVHJoint.o: ../src/CALoader/BVHJoint.h
 
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CALoader/BVH.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CALoader/BVHAxis.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAMath/Mat4.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAMath/Vec.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAMath/Vec2.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAMath/Vec3.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAMath/Vec4.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAViewer/CAMotionGraph.cpp
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAViewer/CAMotionGraph.h
+CMakeFiles/CharA.dir/src/CAViewer/CAMotionGraph.o: ../src/CAViewer/CASkeleton.h
+
 CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o: ../src/CALoader/BVH.h
 CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o: ../src/CALoader/BVHAxis.h
 CMakeFiles/CharA.dir/src/CAViewer/CASkeleton.o: ../src/CALoader/BVHChannel.h
@@ -48,6 +59,7 @@ CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAMath/Vec3.h
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAMath/Vec4.h
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAViewer/Camera.h
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAViewer/Viewer.h
+CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAViewer/CAMotionGraph.h
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAViewer/CASkeleton.h
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAViewer/CAViewer.cpp
 CMakeFiles/CharA.dir/src/CAViewer/CAViewer.o: ../src/CAViewer/CAViewer.h
@@ -75,6 +87,8 @@ CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAMath/Vec.h
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAMath/Vec2.h
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAMath/Vec3.h
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAMath/Vec4.h
+CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAViewer/CAMotionGraph.h
+CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAViewer/CASkeleton.h
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAViewer/CAViewer.h
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAViewer/Camera.h
 CMakeFiles/CharA.dir/src/CAViewer/main.o: ../src/CAViewer/Viewer.h
