@@ -37,7 +37,7 @@ public:
 
   virtual void help();
   virtual void init();
-  virtual void loadMotionGraph(const std::vector<std::string>& bvhFilenames, const float transitionThreshold = 1);
+  virtual void loadMotionGraph(const std::vector<std::string>& bvhFilenames, const float transitionThreshold);
   virtual void animate();
   virtual void draw();
 

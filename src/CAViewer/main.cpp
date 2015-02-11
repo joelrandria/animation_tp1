@@ -12,13 +12,14 @@
 #include <stdlib.h>
 
 CAViewer viewer;
+float bvhTransitionTolerance;
 std::vector<std::string> bvhFilenames;
 
 //! A appeller juste avant la boucle principale (Main Loop)
 void GLInit(GLsizei Width, GLsizei Height)
 {
   viewer.init();
-  viewer.loadMotionGraph(bvhFilenames);
+  viewer.loadMotionGraph(bvhFilenames, bvhTransitionTolerance);
 }
 
 //! Quand la fenetre est 'resizée'
@@ -83,7 +84,7 @@ GLvoid GLResize(GLsizei Width, GLsizei Height)
 
 void usage()
 {
-  fprintf(stderr, "./CharA_d bvhfile1 bvhfile2 ...\r\n");
+  fprintf(stderr, "./CharA_d transition_distance_tolerance bvhfile1 bvhfile2 ...\r\n");
   exit(-1);
 }
 
@@ -95,10 +96,13 @@ int main(int argc, char **argv)
   // Initialize GLUT
   glutInit(&argc, argv);
 
-  if (argc < 3)
+  if (argc < 4)
     usage();
 
-  for (i = 1; i < argc; ++i)
+  if (!sscanf(argv[1], "%f", &bvhTransitionTolerance))
+    usage();
+
+  for (i = 2; i < argc; ++i)
     bvhFilenames.push_back(argv[i]);
 
   /* Select type of Display mode:	 Double buffer	 RGBA color	 Depth buffer	 Alpha blending */
