@@ -17,18 +17,11 @@ class CAViewer : public Viewer
 {
 protected:
 
-  bool isPhysics;
-
-  //! mocap data
-  chara::BVH* m_bvh;
-  //! mocap frame number (when mocap is used)
-  int m_bvhFrame;
-
-  //! skeleton (build from the mocap-BVH data m_bvh)
-  CASkeleton* m_skel;
-
-  //! motion graph
+  //! Le graphe d'animation
   CAMotionGraph m_graph;
+
+  CAMotionGraph::GrapheNodeID m_currentNodeId;
+  CAMotionGraph::GrapheNodeID m_transitionNodeId;
 
 public:
 
@@ -45,6 +38,12 @@ public:
   virtual void specialKeyPressed(int key, int x, int y);
 
 private:
+
+  void promptTransition();
+  void linearAnimation();
+
+  const CAMotionGraph::GrapheNode& getCurrentGraphNode() const { return m_graph.getGraphNode(m_currentNodeId); }
+  const CAMotionGraph::GrapheNode& getNextGraphNode() const { return m_graph.getGraphNode(m_currentNodeId + 1); }
 
   void bvhDrawGL(const chara::BVH& bvh, int frameNumber);
   void bvhDrawGLRec(const chara::BVHJoint& joint, int frameNumber);

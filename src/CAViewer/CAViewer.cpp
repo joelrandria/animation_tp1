@@ -11,6 +11,7 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -20,10 +21,8 @@ using namespace std;
 
 CAViewer::CAViewer()
   :Viewer(),
-   isPhysics(false),
-   m_bvh(NULL),
-   m_bvhFrame(0),
-   m_skel(0)
+   m_currentNodeId(0),
+   m_transitionNodeId(-1)
 {
 }
 CAViewer::~CAViewer()
@@ -32,72 +31,80 @@ CAViewer::~CAViewer()
 
 void CAViewer::help()
 {
-  printf("Animation:\n");
-  printf("   n: Next character pose\n");
-  printf("   b: Back(Previous) character pose");
   Viewer::help();
 }
 
 void CAViewer::init()
 {
   Viewer::init();
-
-  std::string fn_front = "../data/divers/G25Ballet2.bvh";
-
-  if (fn_front != "")
-  {
-    std::string current_file(fn_front);
-    printf("%s\n", current_file.c_str());
-
-    m_bvh = new BVH(current_file.c_str(), true);
-
-    cout << "BVH" << endl;
-    cout << *m_bvh << endl;
-    cout << "------------" << endl;
-
-    m_skel = new CASkeleton(*m_bvh);
-  }
-  else
-  {
-    cout << "No BVH\n";
-  }
 }
 void CAViewer::loadMotionGraph(const std::vector<std::string>& bvhFilenames, const float transitionThreshold)
 {
   m_graph.load(bvhFilenames, transitionThreshold);
 }
 
+void CAViewer::promptTransition()
+{
+  char input[255];
+
+  unsigned int i;
+  const CAMotionGraph::GrapheNode& currentNode = getCurrentGraphNode();
+  const unsigned int targetNodeCount = currentNode.ids_next.size();
+
+  printf("-----------------------------------------------------------------------------------------------------------\r\n");
+  printf("Plusieurs noeuds de transition disponibles: ");
+
+  for (i = 0; i < targetNodeCount; ++i)
+    printf("%d ", currentNode.ids_next[i]);
+
+  printf("\r\n");
+  printf("Veuillez entrer un numéro de noeud de transition ou appuyez sur la touche ENTREE pour continuer: ");
+
+  fgets(input, 255, stdin);
+
+  if (sscanf(input, "%d", &m_transitionNodeId) < 1)
+    printf("Reprise de la lecture linéaire\r\n");
+  else
+    printf("=> Transition vers le noeud #%d\r\n", m_transitionNodeId);
+}
+
 void CAViewer::animate()
 {
-  if (m_bvh)
-  {
-    ++m_bvhFrame;
-    if (m_bvhFrame >= m_bvh->getNumFrame())
-      m_bvhFrame=0;
+  CAMotionGraph::GrapheNode currentNode;
 
-    m_skel->setPose(*m_bvh, m_bvhFrame);
+  if (m_transitionNodeId >= 0)
+  {
+    m_currentNodeId = m_transitionNodeId;
+    m_transitionNodeId = -1;
   }
+  else
+  {
+    linearAnimation();
+
+    currentNode = getCurrentGraphNode();
+    if (!currentNode.ids_next.empty())
+      promptTransition();
+  }
+}
+void CAViewer::linearAnimation()
+{
+  const int nodeCount = m_graph.getGraphNodeCount();
+
+  if ((m_currentNodeId + 1) >= nodeCount)
+    return;
+
+  if (getCurrentGraphNode().id_bvh != getNextGraphNode().id_bvh)
+    return;
+
+  ++m_currentNodeId;
 }
 
 void CAViewer::draw()
 {
-  // glPushMatrix();
-  // glColor3f(1, 0, 0);
-  // bvhDrawGL(*m_bvh, m_bvhFrame);
-  // glPopMatrix();
+  const CAMotionGraph::GrapheNode& node = getCurrentGraphNode();
+  const chara::BVH* bvh = m_graph.getBVH(node.id_bvh);
 
-  // glPushMatrix();
-  // glColor3f(0, 1, 0);
-  // bvhDrawGL(*m_bvh, m_bvhFrame + 50);
-  // glPopMatrix();
-
-  // glPushMatrix();
-  // glColor3f(1, 1, 0);
-  // bvhTransitionDrawGL(*m_bvh, m_bvhFrame, *m_bvh, m_bvhFrame + 50, 0.5f);
-  // glPopMatrix();
-
-  if (m_skel)
-    m_skel->drawGL();
+  bvhDrawGL(*bvh, node.frame);
 }
 void CAViewer::bvhDrawGL(const chara::BVH& bvh, int frameNumber)
 {
@@ -363,32 +370,9 @@ void CAViewer::bvhRotationInterpolation(const math::TQuaternion<float>& q1,
 void CAViewer::keyPressed(unsigned char key, int x, int y)
 {
   bool handled = false;
-  if (key == 'n')
-  {
-    ++m_bvhFrame;
-    //m_skel->setPostureFromBVH( *m_bvh, m_bvhFrame);
-    handled = true;
-  }
-  else if (key == 'b')
-  {
-    --m_bvhFrame;
-    //m_skel->setPostureFromBVH( *m_bvh, m_bvhFrame);
-    handled = true;
-  }
-  else if (key == 'w')
-  {
-    bWireframe = !bWireframe;
-    if (bWireframe)
-      glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    else
-      glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    handled = true;
-  }
 
   if (!handled)
-  {
     Viewer::keyPressed(key,x,y);
-  }
 
   updateGL();
 }
@@ -424,8 +408,7 @@ void CAViewer::specialKeyPressed(int key, int x, int y)
   }
 
   if (!handled)
-  {
     Viewer::specialKeyPressed(key,x,y);
-  }
+
   updateGL();
 }

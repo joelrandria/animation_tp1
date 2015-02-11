@@ -42,6 +42,11 @@ public:
 
   void clear();
 
+  const chara::BVH* getBVH(const unsigned int bvhId) const { return m_BVH[bvhId]; }
+
+  int getGraphNodeCount() const { return (int)m_GrapheNode.size(); }
+  const GrapheNode& getGraphNode(const GrapheNodeID nodeId) const { return m_GrapheNode[nodeId]; }
+
   void load(const std::vector<std::string>& bvhFilenames, const float transitionThreshold);
 
   void write(const std::string& filename) const;
